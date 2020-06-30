@@ -3,20 +3,22 @@ var bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({extended: false});
 var fs = require('fs');
 
+// This code is maintained unchanged from the sample code of C. Barriere
 // read the data file
 function readData(fileName){
     let dataRead = fs.readFileSync('./data/' + fileName + '.json');
     let infoRead = JSON.parse(dataRead);
     return infoRead;
 }
-
+// This code is maintained unchanged from the sample code of C. Barriere
 // read the data file
 function writeData(info, fileName){
     data = JSON.stringify(info);
     fs.writeFileSync('./data/' + fileName + '.json', data);
 }
 
-// update the data file, I use "name" to be equal to fruit, or animal or color
+// This code is modified from the sample code of C. Barriere
+// update the data file, I use "name" to be equal to json data files
 // to match with the file names
 // I assume we always just add 1 to a single item
 function combineCounts(name, value){
@@ -36,9 +38,10 @@ function combineCounts(name, value){
     writeData(info, name);
 }
 
+// This code is modified from the sample code of C. Barriere
 // This is the controler per se, with the get/post
 module.exports = function(app){
-
+    // This code is modified from the sample code of C. Barriere
     // when a user goes to localhost:3000/analysis
     // serve a template (ejs file) which will include the data from the data files
     app.get('/analysis', function(req, res){
@@ -72,8 +75,8 @@ module.exports = function(app){
     app.get('/survey', function(req, res){
         res.sendFile(__dirname+'/views/survey.html');
     });
-
-    // when a user types SUBMIT in localhost:3000/niceSurvey
+    // This code is modified from the sample code of C. Barriere
+    // when a user types SUBMIT in localhost:3000/survey
     // the action.js code will POST, and what is sent in the POST
     // will be recuperated here, parsed and used to update the data files
     app.post('/survey',urlencodedParser, function (req, res) {
