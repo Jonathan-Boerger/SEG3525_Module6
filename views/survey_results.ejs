@@ -1,0 +1,84 @@
+<html lang="en-US">
+<head>
+    <title>Survey Analysis</title>
+</head>
+
+<body>
+<h1>Survey analysis</h1>
+<div>
+    <h2>Yes/No Questions</h2>
+    <div>
+        <h3> Previously Accessed Site // Question 2 </h3>
+        <ul>
+            <% for (var i = 0; i < survey_rslt.previous_access.length; i++){ %>
+                <li><%= survey_rslt.previous_access[i].previous_access %> : <%= survey_rslt.previous_access[i].count %></li>
+            <% } %>
+        </ul>
+    </div>
+    <div>
+        <h3> Target Audience // Question 3 </h3>
+        <ul>
+            <% for (var i = 0; i < survey_rslt.target_audience.length; i++){ %>
+                <li><%= survey_rslt.target_audience[i].target_audience %> : <%= survey_rslt.target_audience[i].count %></li>
+            <% } %>
+        </ul>
+    </div>
+    <div>
+        <h3> Visually Appealing // Question 4 </h3>
+        <ul>
+            <% for (var i = 0; i < survey_rslt.visually_pleasing.length; i++){ %>
+                <li><%= survey_rslt.visually_pleasing[i].visually_pleasing %> : <%= survey_rslt.visually_pleasing[i].count %></li>
+            <% } %>
+        </ul>
+    </div>
+</div>
+
+<div>
+    <h2>Multi Answer Questions</h2>
+    <div>
+        <h3> What Products are Sold // Question 5 </h3>
+        <ul>
+            <% for (var i = 0; i < survey_rslt.products.length; i++){ %>
+                <li><%= survey_rslt.products[i].products %> : <%= survey_rslt.products[i].count %></li>
+            <% } %>
+        </ul>
+    </div>
+
+</div>
+
+<div>
+    <h2>Scale Rating Questions</h2>
+    <div>
+        <h3> Explorability // Question 6 </h3>
+        <ul>
+            <% for (var i = 0; i < survey_rslt.explorability.length; i++){ %>
+                <li><%= survey_rslt.explorability[i].explorability %> : <%= survey_rslt.explorability[i].count %></li>
+            <% } %>
+        </ul>
+    </div>
+
+</div>
+
+<div>
+    <h2>Text Answer  Questions</h2>
+    <div>
+        <h3> Initial Impressions // Question 1 </h3>
+        <ul>
+            <% for (var i = 0; i < survey_rslt.inital_impression.length; i++){ %>
+                <li><%= survey_rslt.inital_impression[i].inital_impression %> : <%= survey_rslt.inital_impression[i].count %></li>
+            <% } %>
+        </ul>
+    </div>
+    <div>
+        <h3> Additional Comments // Question 7 </h3>
+        <ul>
+            <% for (var i = 0; i < survey_rslt.comments.length; i++){ %>
+                <li><%= survey_rslt.comments[i].comments %> : <%= survey_rslt.comments[i].count %></li>
+            <% } %>
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>

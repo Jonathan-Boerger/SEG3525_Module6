@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SEG3525 Module 1-Survey</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="../public/stylesheets/seg3525_mod1.css">
+
+</head>
+<body>
+<header>
+
+    <h1 class="line">User Interface Evaluation Survey - Sondage d'évaluation d’interface d’usagers
+    </h1>
+    <!--    bar-->
+
+</header>
+<div id="UI_ele" >
+    <div class="centered_text">
+        <p  class="center_box_grey"><br>
+            <span id="intro_block">
+            Please study the following sample user
+            interface (UI) and answer the <a href="#questions"> questions</a> bellow. <br>
+
+            SVP prenez compte de l’exemple de l’interface d’utilisateur (IU) et répondez aux
+            <a href="#questions"> questions</a> ci-dessous.<br><br></span>
+            The original UI can be found <a href="http://cpgear.com/">
+                here</a>.<br>Vous pouvez
+            consulter l’IU originale <a href="http://cpgear.com/"> ici</a><br><br>
+
+        </p>
+    </div>
+    <div id="picture">
+        <a href="http://cpgear.com/"><img class=" mx-auto d-block img-fluid"
+                                          src="../public/images/SEG3525-Mod1-Survey-UI-Capture.PNG"
+                                          alt="CP Gear UI Image"></a>
+    </div>
+</div>
+<div id="questions">
+
+    <h2> Survey Questions - Questions de sondage</h2>
+
+    <form id="ui_survey" method="post" action="/survey">
+        <div id="q1" class="q_block form-group" >
+            <!--            What catches your eye initially. Input type text-->
+            <div class="question form-group">
+                <label for="q1_answer" ><span class="blue">1.</span>&emsp;  Please describe what
+                    initially
+                    caught your eye in the image above. <span class="blue">// </span>SVP
+                    décrivez l'élément de l'image qui a initialement
+                    attiré votre attention.
+                </label>
+            </div>
+            <br><br>
+            <textarea id="q1_answer" class="answer txt_area_obj" name="inital_impression"
+                      placeholder="Please enter your answer here. // SVP écrivez votre réponse ici."  required></textarea>
+
+        </div>
+        <div id="q2" class="q_block form-group">
+            <!--            Have you previously accessed this website-->
+            <p class="question"><span class="blue">2.</span>&emsp; Have you previously accessed this
+                website? <span class="blue">// </span>  Avez-vous antérieurement
+                visité ce
+                site web?</p>
+            <div class="answer form-group">
+                <input id="q2_answer_1" type="radio"  name="previous_access" value="Yes" required >
+                <label for="q2_answer_1" class="answer_text_size">Yes <span class="blue">//</span> Oui</label><br>
+                <input id="q2_answer_2" type="radio" name="previous_access" value="No" >
+                <label for="q2_answer_2" class="answer_text_size">No &nbsp;<span class="blue">//</span> Non</label><br>
+                <div class="end_of_div"></div>
+            </div>
+
+        </div>
+        <div id="q2.5" class="q_block">
+
+            <p class="question"><span class="blue">3.</span>&emsp; Do you consider yourself part
+                of the target audience of
+                this website? <span class="blue">//</span> Considérez-vous que vous faites partie
+                de la population ciblée par ce site web?</p>
+            <div class="answer">
+                <input id="q2.5_answer_1" type="radio"  name="target_audience" value="Yes" required>
+                <label for="q2.5_answer_1">Yes <span class="blue">//</span> Oui</label><br>
+                <input id="q2.5_answer_2" type="radio" name="target_audience" value="No">
+                <label for="q2.5_answer_2">No &nbsp;<span class="blue">//</span> Non</label>
+                <div class="end_of_div"></div>
+            </div>
+
+        </div>
+        <div id="q3" class="q_block">
+            <p class="question"><span class="blue">4.</span>&emsp; This website is: <span
+                    class="blue">//</span> Ce site web est:  </p>
+            <div class="answer">
+                <input id="q3_answer_1" type="radio"  name="visually_pleasing" value="Yes" required>
+                <label for="q3_answer_1">Visually pleasing <span class="blue">//</span> Attrayant</label><br>
+                <input id="q3_answer_2" type="radio" name="visually_pleasing" value="No">
+                <label for="q3_answer_2"><strong>Not</strong> visually pleasing <span class="blue">//</span>
+                    <strong>Peu</strong> attrayant</label>
+                <div class="end_of_div"></div>
+            </div>
+        </div>
+        <div id="q4" class="q_block">
+
+            <p class="question"><span class="blue">5.</span>&emsp;  Please select the products
+                which you believe that CP
+                Gear sells. <span class="blue">//</span> SVP indiquez
+                les produits qui, selon-vous, sont vendus par CP Gear.
+                <br><span class="small_text">(You can select multiple options. <span class="blue">//</span> Vous pouvez
+                    sélectionner plusieurs réponses.)</span></p>
+
+            <div class="answer">
+                <input type="checkbox" id="q4_a_1" name="products" value="Name Tag">
+                <label for="q4_a_1">Name tags <span class="blue">//</span>
+                    Étiquettes de nom </label><br>
+                <input type="checkbox" id="q4_a_2" name="products" value="Patches">
+                <label for="q4_a_2">Patches <span class="blue">//</span> Patchs </label><br>
+                <input type="checkbox" id="q4_a_3" name="products" value="Outdoor Apparel">
+                <label for="q4_a_3"> Outdoor Apparel <span class="blue">//</span> Vêtements d'extérieur </label><br>
+                <input type="checkbox" id="q4_a_4" name="products" value="Firearms">
+                <label for="q4_a_4"> Firearms <span class="blue">//</span>
+                    Armes à feu   </label><br>
+                <input type="checkbox" id="q4_a_5" name="products" value="Tactical Clothing">
+                <label for="q4_a_5"> Tactical clothing <span class="blue">//</span> Vêtements tactiques</label><br>
+                <input type="checkbox" id="q4_a_6" name="products" value="Knives">
+                <label for="q4_a_6"> Knives <span class="blue">//</span> Couteaux </label><br>
+                <input type="checkbox" id="q4_a_7" name="products" value="Bags - Packs">
+                <label for="q4_a_7"> Bags &amp packs <span class="blue">//</span> Sacs &amp sac à dos</label><br>
+                <input type="checkbox" id="q4_a_8" name="products"
+                       value="Stationary - writting supplies">
+                <label for="q4_a_8"> Stationary &amp witting supplies <span class="blue">//</span> Articles de papeterie </label><br>
+            </div>
+            <div class="end_of_div"></div>
+
+        </div>
+        <div id="q5" class="q_block">
+            <p class="question"><span class="blue">6.</span>&emsp; To what extent does the UI
+                encourage you to further
+                explore the website? <span class="blue">//</span> Dans quelle mesure l’IU vous
+                encourage-t-il à explorer davantage le site web? </p>
+            <table class="answer">
+                <tr>
+                    <td>&nbsp;</td>
+                    <td class="blue"> <label for="q5_1">1</label> </td>
+                    <td class="blue"> <label for="q5_2">2</label> </td>
+                    <td class="blue"> <label for="q5_3">3</label> </td>
+                    <td class="blue"> <label for="q5_4">4</label> </td>
+                    <td class="blue"> <label for="q5_5">5</label> </td>
+                    <td> &nbsp; </td>
+                </tr>
+                <tr>
+                    <td>Very unlikely<br>
+                        Très improbable </td>
+                    <td> <input id="q5_1" type="radio" name="explorability" value="1" required></td>
+                    <td> <input id="q5_2" type="radio" name="explorability" value="2"></td>
+                    <td> <input id="q5_3" type="radio" name="explorability" value="3"></td>
+                    <td> <input id="q5_4" type="radio" name="explorability" value="4"></td>
+                    <td> <input id="q5_5" type="radio" name="explorability" value="5"></td>
+                    <td> Very likely<br>
+                        Très probable  </td>
+                </tr>
+
+            </table>
+            <div class="end_of_div"></div>
+        </div>
+        <div id="q6" class="q_block">
+
+            <div class="question">
+                <label for="q6_ans" ><span class="blue">7.</span>&emsp;
+                    Do you have
+                    any additional comments or
+                    feedback about the UI? <span class="blue">//</span>
+                    Avez-vous
+                    des
+                    commentaires supplémentaires à propos l’IU? </label>
+            </div>
+            <br><br>
+
+            <textarea id="q6_ans" class="answer txt_area_obj" name="comments"
+                      placeholder="Write your comments here. // Écrivez vos commentaires ici." rows="4" cols="50"></textarea>
+
+        </div>
+        <div class="q_block"><br>
+            <input type="submit" class="centered_img sub_btn">
+            <p class="question centered_text"> Thank you for having completed the survey! <span class="blue">
+                //</span>
+                Merci d'avoir
+                complété le
+                sondage!</p>
+        </div>
+    </form>
+<!--    <div class="jumbotron m-3 d-flex flex-row justify-content-center ">-->
+<!--           <a href="/analysis"> <button class="btn-info"> Survey Results &amp;-->
+<!--        Analysis</button></a>-->
+<!--    </div>-->
+<!--    -->
+<!--        <div class="q_block">-->
+<!--            <div class="question centered_text">-->
+<!--                <label for="email_add">Add your email if you are interested in completing-->
+<!--                    future surveys. <span class="blue">//</span> Fournissez votre adresse email si vous voulez compléter d’autres-->
+<!--                    sondages à l'avenir.</label>-->
+
+
+<!--            </div>-->
+<!--            <br><br>-->
+<!--            <div>-->
+<!--                <form method="post" action="/survey_email" id="email_signup">-->
+<!--                    <input id="email_add" type="email"-->
+<!--                           placeholder="Your email // Votre adresse email" required-->
+<!--                           class=" email_in" name="email"-->
+
+<!--                    >-->
+<!--                    <button type="submit" value="Submit" class="centered_img sub_btn_2" >Sign-->
+<!--                        up for additional-->
+<!--                        surveys <br>-->
+<!--                        <br>Inscrivez-vous pour des sondages supplémentaires </button><br><br>-->
+<!--                </form>-->
+<!--            </div>-->
+
+
+<!--            <br>-->
+<!--        </div>-->
+<!--   -->
+<!--</div>-->
+<div class="footerr">
+    <p class="p_ft"> Website created by: <br><br>
+        Jonathan Boerger <br>
+        300098636<br>
+        SEG 3525 <br>
+        University of Ottawa
+    </p>
+</div>
+</body>
+
+
+
+</html>
+<script src="/public/assets/action.js"></script>

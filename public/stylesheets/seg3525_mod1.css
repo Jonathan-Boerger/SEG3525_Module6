@@ -1,0 +1,210 @@
+html{
+    font-family: 'Lato', sans-serif;
+    /*background-image: url("https://images.unsplash.com/photo-1557683304-673a23048d34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=486&q=80") ;*/
+    /*background-size: cover;*/
+
+}
+
+body{
+    background-color: #59595e;
+    margin: 0;
+}
+h1 {
+    text-align: center;
+    font-size: 3em;
+    padding-bottom: 10px;
+    color: whitesmoke ;
+
+
+
+}
+
+.line{
+    border-bottom: darkcyan 5px solid;
+}
+
+img {
+    width: 75%;
+    height: 75%;
+    border: black 2px solid;
+    border-radius: 15px;
+}
+
+
+
+.centered_img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centered_text{
+    text-align: center;
+}
+
+#intro_block{
+   font-size: 1.2em;
+
+}
+
+.center_box_grey{
+    background-color: lightgrey;
+    width: 75%;
+    position: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    border: black 2px solid;
+
+}
+.line2{
+    content: ""; /* This is necessary for the pseudo element to work. */
+    display: block; /* This will put the pseudo element on its own line. */
+    margin: 0 ; /* This will center the border. */
+    width: 50%; /* Change this to whatever width you want. */
+    padding-top: 20px; /* This creates some space between the element and the border. */
+    border-top: 3px solid grey; /* This creates the border. Replace black with whatever color you want. */
+}
+h2{
+    margin-top: 2em;
+    margin-bottom: 25px;
+    font-size: 2em;
+    border-bottom: 3px solid darkcyan;
+    text-align: center;
+    color: whitesmoke ;
+}
+
+a {
+    text-decoration-line: none;
+    color: darkcyan;}
+
+td {
+    text-align: center;
+}
+
+
+.question{
+    font-size: 1.25em;
+    padding-top: 15px;
+    padding-left: 15px;
+
+
+}
+
+.q_block{
+    background-color: #d9d9d9;
+    border-radius: 15px;
+    border: black 2px solid;
+    margin: 15px 8px;
+
+
+
+}
+
+.answer{
+    padding-left: 35px;
+    padding-bottom: 15px;
+    font-size: 1em;
+}
+
+.answer_text_size{
+    font-size: 1em;
+}
+.txt_area_obj{
+    margin-left: 35px;
+    margin-bottom: 15px;
+    width: 60%;
+    height: 70px;
+    background: whitesmoke;
+    border-radius: 15px;
+    padding-right: 35px;
+
+}
+
+
+textarea:focus {
+    border: 3px solid darkcyan;
+    border-radius: 15px;
+    background: white;
+}
+
+.end_of_div{
+    padding-bottom: 15px;
+}
+
+.small_text{
+    font-size: 0.8em;
+    font-style: italic;}
+
+.blue{
+    color: darkcyan;
+}
+
+p{margin-top: 0}
+
+.footerr{
+    background-color: rgb(0, 161, 161);
+    text-align: center;
+    color: whitesmoke;
+    width: available;
+    height: 125%;
+    padding: 25px 0;
+    font-size: small;
+    margin-top: 150px;
+
+}
+
+
+
+.p_ft{
+    margin: 0;
+}
+
+.sub_btn{
+    background-color: darkcyan;
+    border: black 2px solid;
+    color: white;
+    padding: 16px 32px;
+    border-radius: 15px;
+}
+
+input[type=checkbox]:checked + label{
+     font-weight: bold;
+ }
+input[type=radio]:checked + label{
+
+    font-weight: bold;
+}
+
+.email_in{
+    position: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    text-align: center;
+    height: 20px;
+
+
+    color: slategray;
+    border-radius: 10px;
+    background: whitesmoke;
+
+}
+
+.email_in:focus{
+    border: 3px solid darkcyan;
+    border-radius: 10px;
+    background: white;
+}
+
+.sub_btn_2{
+    background-color: darkcyan;
+    border: black 2px solid;
+    color: white;
+    padding: 16px 32px;
+    border-radius: 15px;
+    white-space: normal;
+    width: 60%;
+}
